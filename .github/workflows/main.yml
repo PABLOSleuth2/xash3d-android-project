@@ -1,0 +1,13 @@
+name: Build
+
+on: [push, pull_request]
+
+jobs:
+   build-android-armv7a:
+    runs-on: ubuntu-20.04
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build android-armv7a
+      run: |
+        compile.sh
